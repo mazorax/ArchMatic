@@ -114,27 +114,27 @@ function baseSetup {
             'libsecret'                 # Library for storing passwords
         
         # --- Audio
-            'alsa-utils'        # Advanced Linux Sound Architecture (ALSA) Components https://alsa.opensrc.org/
-            'alsa-plugins'      # ALSA plugins
-            'pulseaudio'        # Pulse Audio sound components
-            'pulseaudio-alsa'   # ALSA configuration for pulse audio
-            'pavucontrol'       # Pulse Audio volume control
-            'pnmixer'           # System tray volume control
+        #    'alsa-utils'        # Advanced Linux Sound Architecture (ALSA) Components https://alsa.opensrc.org/
+        #    'alsa-plugins'      # ALSA plugins
+        #    'pulseaudio'        # Pulse Audio sound components
+        #    'pulseaudio-alsa'   # ALSA configuration for pulse audio
+        #    'pavucontrol'       # Pulse Audio volume control
+        #    'pnmixer'           # System tray volume control
 
         # --- Bluetooth
-            'bluez'                 # Daemons for the bluetooth protocol stack
-            'bluez-utils'           # Bluetooth development and debugging utilities
-            'bluez-firmware'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
-            'blueberry'             # Bluetooth configuration tool
-            'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
+        #    'bluez'                 # Daemons for the bluetooth protocol stack
+        #    'bluez-utils'           # Bluetooth development and debugging utilities
+        #    'bluez-firmware'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
+        #    'blueberry'             # Bluetooth configuration tool
+        #    'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
         
         # --- Printers
-            'cups'                  # Open source printer drivers
-            'cups-pdf'              # PDF support for cups
-            'ghostscript'           # PostScript interpreter
-            'gsfonts'               # Adobe Postscript replacement fonts
-            'hplip'                 # HP Drivers
-            'system-config-printer' # Printer setup  utility
+        #    'cups'                  # Open source printer drivers
+        #    'cups-pdf'              # PDF support for cups
+        #    'ghostscript'           # PostScript interpreter
+        #    'gsfonts'               # Adobe Postscript replacement fonts
+        #    'hplip'                 # HP Drivers
+        #    'system-config-printer' # Printer setup  utility
     )
 
     for PKG in "${PKGS[@]}"; do
@@ -226,9 +226,9 @@ function softwareSetup {
 
         # MEDIA ---------------------------------------------------------------
 
-        'kdenlive'              # Movie Render
-        'obs-studio'            # Record your screen
-        'celluloid'             # Video player
+        # 'kdenlive'              # Movie Render
+        # 'obs-studio'            # Record your screen
+        # 'celluloid'             # Video player
         
         # GRAPHICS AND DESIGN -------------------------------------------------
 
@@ -368,18 +368,18 @@ FONT=ter-v32b' < /etc/vconsole.conf
 
     # ------------------------------------------------------------------------
 
-    echo
-    echo "Enabling bluetooth daemon and setting it to auto-start"
+    # echo
+    # echo "Enabling bluetooth daemon and setting it to auto-start"
 
-    sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
-    sudo systemctl enable --now bluetooth.service
+    # sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
+    # sudo systemctl enable --now bluetooth.service
 
     # ------------------------------------------------------------------------
 
     echo
-    echo "Enabling the cups service daemon so we can print"
+    # echo "Enabling the cups service daemon so we can print"
 
-    systemctl enable --now org.cups.cupsd.service
+    # systemctl enable --now org.cups.cupsd.service
 
     echo "Configuring NTP, DHCP and NetworkManager services"
     sudo ntpd -qg && sudo systemctl enable --now ntpd && sudo systemctl disable dhcpcd && sudo systemctl stop dhcpcd && sudo systemctl enable --now NetworkManager
