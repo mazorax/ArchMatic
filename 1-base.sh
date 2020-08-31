@@ -42,28 +42,28 @@ PKGS=(
         'network-manager-applet'    # System tray icon/utility for network connectivity
         'libsecret'                 # Library for storing passwords
     
-    # --- Audio
-        'alsa-utils'        # Advanced Linux Sound Architecture (ALSA) Components https://alsa.opensrc.org/
-        'alsa-plugins'      # ALSA plugins
-        'pulseaudio'        # Pulse Audio sound components
-        'pulseaudio-alsa'   # ALSA configuration for pulse audio
-        'pavucontrol'       # Pulse Audio volume control
-        'pnmixer'           # System tray volume control
+    # --- Audio ---Disable Audio install for server
+        # 'alsa-utils'        # Advanced Linux Sound Architecture (ALSA) Components https://alsa.opensrc.org/
+        # 'alsa-plugins'      # ALSA plugins
+        # 'pulseaudio'        # Pulse Audio sound components
+        # 'pulseaudio-alsa'   # ALSA configuration for pulse audio
+        # 'pavucontrol'       # Pulse Audio volume control
+        # 'pnmixer'           # System tray volume control
 
-    # --- Bluetooth
-        'bluez'                 # Daemons for the bluetooth protocol stack
-        'bluez-utils'           # Bluetooth development and debugging utilities
-        'bluez-firmware'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
-        'blueberry'             # Bluetooth configuration tool
-        'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
+    # --- Bluetooth ---Disable Bluetooh install for server
+        # 'bluez'                 # Daemons for the bluetooth protocol stack
+        # 'bluez-utils'           # Bluetooth development and debugging utilities
+        # 'bluez-firmware'        # Firmwares for Broadcom BCM203x and STLC2300 Bluetooth chips
+        # 'blueberry'             # Bluetooth configuration tool
+        # 'pulseaudio-bluetooth'  # Bluetooth support for PulseAudio
     
-    # --- Printers
-        'cups'                  # Open source printer drivers
-        'cups-pdf'              # PDF support for cups
-        'ghostscript'           # PostScript interpreter
-        'gsfonts'               # Adobe Postscript replacement fonts
-        'hplip'                 # HP Drivers
-        'system-config-printer' # Printer setup  utility
+    # --- Printers ---Disable printer functions for server
+        # 'cups'                  # Open source printer drivers
+        # 'cups-pdf'              # PDF support for cups
+        # 'ghostscript'           # PostScript interpreter
+        # 'gsfonts'               # Adobe Postscript replacement fonts
+        # 'hplip'                 # HP Drivers
+        # 'system-config-printer' # Printer setup  utility
 )
 
 for PKG in "${PKGS[@]}"; do
