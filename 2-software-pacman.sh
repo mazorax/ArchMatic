@@ -91,16 +91,16 @@ PKGS=(
     'yarn'                  # Dependency management (Hyper needs this)
 
     # MEDIA ---------------------------------------------------------------
-
-    'kdenlive'              # Movie Render
-    'obs-studio'            # Record your screen
-    'celluloid'             # Video player
+    # Not needed for server
+    # 'kdenlive'              # Movie Render
+    # 'obs-studio'            # Record your screen
+    # 'celluloid'             # Video player
     
     # GRAPHICS AND DESIGN -------------------------------------------------
-
-    'gcolor2'               # Colorpicker
-    'gimp'                  # GNU Image Manipulation Program
-    'ristretto'             # Multi image viewer
+    # Not needed for server
+    # 'gcolor2'               # Colorpicker
+    # 'gimp'                  # GNU Image Manipulation Program
+    # 'ristretto'             # Multi image viewer
 
     # PRODUCTIVITY --------------------------------------------------------
 
