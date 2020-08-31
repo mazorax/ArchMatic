@@ -90,7 +90,7 @@ echo -e "\nDisabling Pulse .esd_auth module"
 
 # Pulse audio loads the `esound-protocol` module, which best I can tell is rarely needed.
 # That module creates a file called `.esd_auth` in the home directory which I'd prefer to not be there. So...
-sudo sed -i 's|load-module module-esound-protocol-unix|#load-module module-esound-protocol-unix|g' /etc/pulse/default.pa
+# sudo sed -i 's|load-module module-esound-protocol-unix|#load-module module-esound-protocol-unix|g' /etc/pulse/default.pa
 
 # ------------------------------------------------------------------------
 
@@ -100,16 +100,16 @@ sudo systemctl enable --now lightdm.service
 
 # ------------------------------------------------------------------------
 
-echo -e "\nEnabling bluetooth daemon and setting it to auto-start"
+# echo -e "\nEnabling bluetooth daemon and setting it to auto-start"
 
-sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
-sudo systemctl enable --now bluetooth.service
+# sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
+# sudo systemctl enable --now bluetooth.service
 
 # ------------------------------------------------------------------------
 
-echo -e "\nEnabling the cups service daemon so we can print"
+# echo -e "\nEnabling the cups service daemon so we can print"
 
-systemctl enable --now org.cups.cupsd.service
+# systemctl enable --now org.cups.cupsd.service
 sudo ntpd -qg
 sudo systemctl enable --now ntpd.service
 sudo systemctl disable dhcpcd.service
