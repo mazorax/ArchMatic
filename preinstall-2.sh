@@ -1,5 +1,3 @@
-arch-chroot /mnt
-
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
 echo "--------------------------------------"
@@ -24,8 +22,3 @@ echo "Enter password for root user: "
 passwd root
 
 exit
-umount -R /mnt
-
-echo "--------------------------------------"
-echo "--   SYSTEM READY FOR FIRST BOOT    --"
-echo "--------------------------------------"
